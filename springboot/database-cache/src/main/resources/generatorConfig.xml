@@ -15,22 +15,23 @@
       <property name="forceBigDecimals" value="false" />
     </javaTypeResolver>
 
-    <javaModelGenerator targetPackage="org.newit.microservice.databasedemo.model"
-                        targetProject="/Users/admin/airuitian/MicroService/springboot/database-cache/src/main/java">
+    <javaModelGenerator targetPackage="org.newit.microservice.ebusiness.model"
+                        targetProject="${basedir}/src/main/java">
       <property name="enableSubPackages" value="true" />
       <property name="trimStrings" value="true" />
     </javaModelGenerator>
 
-    <sqlMapGenerator targetPackage="mapper"  targetProject="/Users/admin/airuitian/MicroService/springboot/database-cache/src/main/resources">
+    <sqlMapGenerator targetPackage="mapper"  targetProject="${basedir}/src/main/resources">
       <property name="enableSubPackages" value="true" />
     </sqlMapGenerator>
 
-    <javaClientGenerator type="XMLMAPPER" targetPackage="org.newit.microservice.databasedemo.dao"
-                         targetProject="/Users/admin/airuitian/MicroService/springboot/database-cache/src/main/java">
+    <javaClientGenerator type="XMLMAPPER" targetPackage="org.newit.microservice.ebusiness.dao"
+                         targetProject="${basedir}/src/main/java">
       <property name="enableSubPackages" value="true" />
     </javaClientGenerator>
 
-    <table tableName="user"
-           domainObjectName="User"></table>
+    <table tableName="user" domainObjectName="User"></table>
+    <table tableName="order" domainObjectName="Order"></table>
+    <table tableName="item" domainObjectName="Item"></table>
   </context>
 </generatorConfiguration>
